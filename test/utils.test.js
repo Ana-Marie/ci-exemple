@@ -24,5 +24,11 @@ describe('Utils', () => {
             expect(acharCaracter(-4, 'abcde', 'c'))
                 .toBe('comprimento invalido');
         });
+        test('Deve retornar o indice cujo o caracter foi encontrado',()=>{
+            expect(acharCaracter(3,'xyz','y')).toBe(1);
+        })
+        test('deve apresentar mensagem indicando que o caracter não está presente na cadeia: caracter não encontrado',()=>{
+        expect(acharCaracter(5,'abcde','w')).toBe("caracter não encontrado");
+        });
     });    
 });
